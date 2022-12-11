@@ -38,14 +38,31 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - Tesla - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <p>
+                Fortrolighed & Jura,
+                Kontakt,
+                Karriere,
+                Nyheder,
+                Lokationer,
+                </p>
+
+            
+
+            &copy; 2022 - Tesla - <a asp-area="" asp-page="/Privacy">Privacy</a> 
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
+    <style>
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: darkblue;
+            color: white;
+        }
+    </style>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
