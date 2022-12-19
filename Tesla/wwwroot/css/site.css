@@ -16,3 +16,13 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: skyblue;
+    color: white;
+}
