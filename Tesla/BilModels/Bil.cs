@@ -1,6 +1,6 @@
 ﻿using System.Net.Cache;
 
-namespace Tesla.Models
+namespace Tesla.BilModels
 {
     public class Bil
     {
@@ -8,12 +8,12 @@ namespace Tesla.Models
         public double Price { get; set; }
         public string Description { get; set; }
 
-        public Bil ()
+        public Bil()
         {
 
         }
 
-        public Bil (string model, double price, string description)
+        public Bil(string model, double price, string description)
         {
             Model = model;
             Price = price;

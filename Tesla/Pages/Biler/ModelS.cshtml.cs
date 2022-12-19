@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Tesla.Models;
+using Tesla.BilModels;
 
 namespace Tesla.Pages.bil
 {
