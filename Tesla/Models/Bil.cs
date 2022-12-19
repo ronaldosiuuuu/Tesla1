@@ -23,7 +23,7 @@ namespace Tesla.Models
 
         public override string ToString()
         {
-            return $"";
+            return $"{{}}";
         }
     }
 }
