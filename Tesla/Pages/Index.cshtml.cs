@@ -1,20 +1,44 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Tesla.Services;
 
 namespace Tesla.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly IBrugerService _brugerService;
 
-        public IndexModel(ILogger<IndexModel> logger)
+
+        public bool IsAdmin
         {
-            _logger = logger;
+            get
+            {
+                return _brugerService.IsUserAdmin;
+            }
         }
 
-        public void OnGet()
+        public String Name
         {
+            get
+            {
+                return _brugerService.Username;
+            }
+        }
 
+        public IndexModel(IBrugerService brugerService)
+        {
+           _brugerService = brugerService;
+        }
+
+        public IActionResult OnGet()
+        {
+        
+            if (!_brugerService.IsLoggedIn)
+            {
+                return RedirectToPage("Logind");
+            }
+
+            return Page();
         }
     }
 }
