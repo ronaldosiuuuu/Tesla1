@@ -13,6 +13,8 @@ namespace Tesla.BilModels
 
         }
 
+
+
         public Bil(string model, double price, string description)
         {
             Model = model;
@@ -23,7 +25,7 @@ namespace Tesla.BilModels
 
         public override string ToString()
         {
-            return $"{{}}";
+            return $"{{ {nameof(Model)}={Model},{nameof(Price)}={Price}   }}";
         }
     }
 }
